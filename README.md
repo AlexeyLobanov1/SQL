@@ -1,6 +1,5 @@
 # SQL
-CRUD - CREATE/READ/UPDATE/DELETE
 
-[TASKS](https://github.com/AlexeyLobanov1/SQL/blob/main/Tasks)
+[SQL TASKS - SELECT, INSERT, UPDATE, DELETE](https://github.com/AlexeyLobanov1/SQL/blob/main/Tasks)
 
 ![tables](https://github.com/AlexeyLobanov1/SQL/blob/main/Tables.jpg?raw=true)
