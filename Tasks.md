@@ -1,4 +1,4 @@
-1.Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами.
+1.Вивести всіх працівників, чиї зарплати є в базі, разом із зарплатами.
 ```sql
 SELECT employee_name, monthly_salary FROM employees
 JOIN employee_salary
@@ -7,7 +7,7 @@ JOIN Salary
 ON employee_salary.salary_id = Salary.Salary_Id;
 ```
 
-2.Вывести всех работников у которых ЗП меньше 2000
+2.Вивести всіх працівників у яких ЗП менше 2000
 ```sql
 SELECT employee_name, monthly_salary FROM employees
 JOIN employee_salary
@@ -17,7 +17,7 @@ ON employee_salary.salary_id = Salary.Salary_Id
 WHERE monthly_salary < 2000;
 ```
 
-3.Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но непонятно кто её получает.
+3.Вивести всі зарплатні позиції, але працівника за ними не призначено. (ЗП є, але незрозуміло хто її отримує.
 ```sql
 SELECT employee_name, monthly_salary FROM employees
 FULL JOIN employee_salary
@@ -27,7 +27,7 @@ ON employee_salary.salary_id = Salary.Salary_Id
 WHERE employee_name IS NULL;
 ```
 
-4.Вывести все зарплатные позиции меньше 2000 но работник по ним не назначен. (ЗП есть, но непонятно кто её получает.)
+4.Вивести всі зарплатні позиції, менші за 2000, але працівника за ними не призначено. (ЗП є, але незрозуміло хто її отримує.)
 ```sql
 SELECT employee_name, monthly_salary FROM employees
 FULL JOIN employee_salary
@@ -38,7 +38,7 @@ WHERE employee_name IS NULL
 OR monthly_salary < 2000;
 ```
 
-5.Найти всех работников кому не начислена ЗП.
+5.Знайти всіх працівників кому не нарахована ЗП.
 ```sql
 FULL JOIN employee_salary
 ON employees.employee_Id = employee_salary.employee_id
@@ -47,7 +47,7 @@ ON employee_salary.salary_id = Salary.Salary_Id
 WHERE monthly_salary IS NULL;
 ```
 
-6.Вывести имена и должность только Java разработчиков.
+6.Вивести імена та посаду тільки Java розробників.
 ```sql
 SELECT employee_name, role_name FROM employees
 JOIN roles_employee
@@ -57,7 +57,7 @@ ON roles_employee.roles_id = roles.roles_id
 WHERE role_name LIKE "%java developer%";
 ```
 
-7.Вывести имена и должность только Python разработчиков.
+7.Вивести імена та посаду тільки Python розробників.
 ```sql
 SELECT employee_name, role_name FROM employees
 JOIN roles_employee
@@ -67,7 +67,7 @@ ON roles_employee.roles_id = roles.roles_id
 WHERE role_name LIKE "%Python developer%";
 ```
 
-8.Вывести имена и должность всех QA инженеров.
+8.Вивести імена та посаду всіх QA інженерів.
 ```sql
 SELECT employee_name, role_name FROM employees
 JOIN roles_employee
@@ -77,7 +77,7 @@ ON roles_employee.roles_id = roles.roles_id
 WHERE role_name LIKE "%QA%";
 ```
 
-9.Вывести имена и зарплаты Senior Java разработчиков.
+9.Вивести імена та зарплати Senior Java розробників.
 ```sql
 SELECT employee_name, role_name, monthly_salary FROM employees
 JOIN roles_employee
@@ -91,7 +91,7 @@ ON employee_salary.salary_id = Salary.Salary_Id
 WHERE roles.role_name LIKE "%Senior Java developer%";
 ```
 
-10.Вывести имена, должности и ЗП всех специалистов по возрастанию.
+10.Вивести імена, посади та ЗП усіх фахівців за зростанням.
 ```sql
 SELECT employee_name, role_name, monthly_salary FROM employees
 JOIN roles_employee
